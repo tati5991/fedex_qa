@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "e2e-dashboard" : "ng e2e --record --key 9abc3dad-5164-4a25-b933-1ad42b85b4db",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
