@@ -41,3 +41,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+declare namespace Cypress {
+    interface Chainable<Subject> {
+      search(title: string): Chainable<any>
+    }
+  }
+
+Cypress.Commands.add("search", (input) => { 
+    cy.get('#query').type(input);
+    cy.get('[type="submit"]').click()
+})

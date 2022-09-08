@@ -1,15 +1,13 @@
 describe('Search for character', ()=> {
     it('should find a valid character', () => {
         cy.visit('/') 
-        cy.get('#query').type('luke')
-        cy.get('[type="submit"]').click()
+        cy.search('luke')
         cy.get('#character_name').should('contain','Luke Skywalker')
     })
 
     it('should return not found for invalid character', () => {
         cy.visit('/') 
-        cy.get('#query').type('invalid')
-        cy.get('[type="submit"]').click()
+        cy.search('invalid')
         cy.get('#message').should('contain','Not found.')
     })
 
