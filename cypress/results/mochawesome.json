@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-09-08T08:20:56.718Z",
+    "end": "2022-09-08T08:21:04.385Z",
+    "duration": 7667,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e44c002c-9a1b-45e1-a32d-ba308c532d60",
+      "title": "",
+      "fullFile": "cypress/e2e/clear-search-form.cy.ts",
+      "file": "cypress/e2e/clear-search-form.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8823c8ec-c0ab-4040-94ea-46cc4ac00ad1",
+          "title": "Clear search result",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "clear search result",
+              "fullTitle": "Clear search result clear search result",
+              "timedOut": null,
+              "duration": 7648,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('#query').type('Darth');\ncy.get('[type=\"submit\"]').click();\ncy.get('app-character').should('have.length', 2);\ncy.get('#query').clear();\ncy.get('[type=\"submit\"]').click();\ncy.get('app-character').should('not.exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected [ <app-character>, 1 more... ] not to exist in the DOM, but it was continuously found.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected [ <app-character>, 1 more... ] not to exist in the DOM, but it was continuously found.\n    at Context.eval (http://localhost:4200/__cypress/tests?p=cypress/e2e/clear-search-form.cy.ts:104:33)",
+                "diff": null
+              },
+              "uuid": "e1423661-83c6-4fe4-a5f9-e7466238648b",
+              "parentUUID": "8823c8ec-c0ab-4040-94ea-46cc4ac00ad1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e1423661-83c6-4fe4-a5f9-e7466238648b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7648,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

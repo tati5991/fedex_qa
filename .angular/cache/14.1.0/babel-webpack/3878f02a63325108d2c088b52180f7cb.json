@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { RouterModule } from '@angular/router';\nimport { AppComponent } from './app.component';\nvar routes = [{\n  path: '**',\n  component: AppComponent\n}];\nexport var AppRoutesModule = RouterModule.forRoot(routes);","map":null,"metadata":{},"sourceType":"module"}
